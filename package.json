@@ -1,17 +1,32 @@
 {
   "name": "agent-behavioral-fuzzer",
-  "description": "Stress-testing agent logic with randomized/adversarial inputs to find edge case failures",
   "version": "1.0.0",
-  "type": "module",
-  "scripts": {
-    "test": "bun test",
-    "build": "tsc"
+  "description": "Stress-testing agent logic with randomized/adversarial inputs to find edge case failures",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "agent-fuzzer": "dist/cli.js"
   },
+  "scripts": {
+    "build": "tsc",
+    "start": "bun src/cli.ts",
+    "test": "bun test"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "fuzzing",
+    "security",
+    "testing",
+    "adversarial"
+  ],
+  "author": "Retsumdk",
+  "license": "MIT",
   "dependencies": {
-    "commander": "^11.1.0"
+    "commander": "^12.1.0"
   },
   "devDependencies": {
-    "bun-types": "^1.0.0",
-    "typescript": "^5.3.0"
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.5"
   }
 }
